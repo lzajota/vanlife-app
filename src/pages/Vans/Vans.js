@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, useSearchParams } from "react-router-dom"
-import { getVans } from "../../../api"
+import { getVans } from "../../api"
 
 export default function Vans() {
     const [searchParams, setSearchParams] = useSearchParams()
@@ -39,7 +39,7 @@ export default function Vans() {
                     type: typeFilter
                 }}
             >
-                <img src={van.imageUrl} />
+                <img src={van.imageUrl} alt="" />
                 <div className="van-info">
                     <h3>{van.name}</h3>
                     <p>${van.price}<span>/day</span></p>

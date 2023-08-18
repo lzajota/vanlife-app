@@ -1,25 +1,25 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
-// import { useUserAuth } from '../context/userAuthContext';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { UserAuth } from '../context/AuthContext';
 
 const Signup = () => {
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
     const [error, setError] = useState('')
-
-
-    // const { signup } = useUserAuth();
+    const { createUser } = UserAuth();
+    const navigate = useNavigate()
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError('');
         try {
-            await signup(email, password);
-        } catch (err) {
-            setError(err.message);
-            console.log(err.message);
+            await createUser(email, password);
+            navigate('/account')
+        } catch (e) {
+            setError(e.message);
+            console.log(e.message);
         }
-    }
+    };
 
     return (
         <div className='login-container'>

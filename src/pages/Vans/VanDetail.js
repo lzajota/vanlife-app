@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, useParams, useLocation } from "react-router-dom"
-import { getVan } from "../../../api"
+import { getVan } from "../../api"
 
 export default function VanDetail() {
     const [van, setVan] = React.useState(null)
@@ -45,7 +45,7 @@ export default function VanDetail() {
 
             {van && (
                 <div className="van-detail">
-                    <img src={van.imageUrl} />
+                    <img src={van.imageUrl} alt="" />
                     <i className={`van-type ${van.type} selected`}>
                         {van.type}
                     </i>
