@@ -35,13 +35,12 @@ export default function Header() {
                 >
                     Vans
                 </NavLink>
-                <Link to="signup" className="login-link">
+                <Link to="account" className="login-link">
                     <img
                         src={imageUrl}
                         className="login-icon"
                     />
                 </Link>
-                <button onClick={fakeLogOut}>X</button>
             </nav>
         </header>
     )

@@ -498,6 +498,18 @@ i[class*="van-type-"] {
     text-align: center;
 }
 
+.login-container>button {
+    background-color: #ff8c38;
+    border: none;
+    border-radius: 6px;
+    height: 55px;
+    padding: 15px;
+    margin-top: 22px;
+    color: white;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+}
+
 .login-form {
     display: flex;
     flex-direction: column;

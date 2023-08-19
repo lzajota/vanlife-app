@@ -1,20 +1,13 @@
-import React from "react"
-import { Outlet, Navigate, useLocation } from "react-router-dom"
+import React from 'react';
+import { Outlet, Navigate } from 'react-router-dom';
+import { UserAuth } from '../context/AuthContext';
 
-export default function AuthRequired() {
-    const isLoggedIn = localStorage.getItem("loggedin")
-    const location = useLocation()
+const AuthRequired = ({ children }) => {
+    const { user } = UserAuth();
 
-    if (!isLoggedIn) {
-        return (
-            <Navigate
-                to="/login"
-                state={{
-                    message: "You must log in first",
-                    from: location.pathname
-                }}
-                replace
-            />)
-    }
-    return <Outlet />
-}
+    return (
+        user ? <Outlet /> : <Navigate to='/signin' />
+    )
+};
+
+export default AuthRequired;
