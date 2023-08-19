@@ -23,7 +23,6 @@ import Account from "./pages/Account"
 import Signup from './pages/Signup';
 import { AuthContextProvider } from './context/AuthContext';
 
-// import "./server"
 
 function App() {
 
