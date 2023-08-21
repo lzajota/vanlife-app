@@ -34,12 +34,14 @@ header {
     height: 110px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding-block: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
 }
 
 header .site-logo {
     color: black;
-    margin-right: auto;
     text-transform: uppercase;
     font-weight: 900;
     font-size: 25px;
@@ -48,8 +50,7 @@ header .site-logo {
 header a {
     text-decoration: none;
     color: #4d4d4d;
-    font-weight: 600;
-    padding: 5px 20px;
+    /* margin: 0 30px */
 }
 
 header a:hover {
@@ -58,8 +59,8 @@ header a:hover {
 }
 
 header .login-icon {
-    height: 18px;
-    width: 18px;
+    height: 22px;
+    width: 22px;
 }
 
 header .login-link {
@@ -69,10 +70,13 @@ header .login-link {
 
 nav {
     display: flex;
+    gap: 30px;
 }
 
 main {
-    margin-bottom: 84px;
+    /* margin-bottom: 84px; */
+    margin: 0 auto;
+    padding: 15px;
 }
 
 footer {
@@ -126,6 +130,7 @@ footer {
     min-height: 350px;
     color: white;
     padding: 45px 23px;
+    border-radius: 8px;
 }
 
 .home-container h1 {
@@ -149,7 +154,7 @@ footer {
     padding-block: 0.75rem;
     color: white;
     font-weight: 700;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     transition: transform 0.1s ease-in-out;
 }
@@ -159,8 +164,19 @@ footer {
 }
 
 /*** ABOUT PAGE ***/
+.about-page-container {
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+/* .about-page-container,
+footer {
+    margin-top: 20px;
+} */
+
 .about-hero-image {
     max-width: 100%;
+    border-radius: 8px;
 }
 
 .about-page-content {
@@ -217,6 +233,7 @@ footer {
     justify-items: center;
     gap: 34px;
     margin-top: 57px;
+    max-width: 1000px;
 }
 
 .van-tile a {
@@ -308,6 +325,7 @@ i[class*="van-type-"] {
     display: flex;
     flex-direction: column;
     color: #161616;
+    max-width: 700px;
 }
 
 .van-detail img {
@@ -329,6 +347,10 @@ i[class*="van-type-"] {
     margin-bottom: 10px;
 }
 
+.van-detail p {
+    line-height: 1.4;
+}
+
 .van-detail .van-price span {
     font-weight: 700;
     font-size: 1.5rem;
@@ -342,6 +364,7 @@ i[class*="van-type-"] {
 
 .host-nav {
     display: flex;
+    justify-content: center;
     margin-bottom: 30px;
 }
 
@@ -700,6 +723,7 @@ img.graph {
 .host-reviews {
     padding-inline: 26px;
     color: #161616;
+    max-width: 700px;
 }
 
 .host-reviews .top-text {
@@ -756,4 +780,10 @@ img.graph {
 .host-reviews .review-star {
     color: #ff8c38;
     margin-right: 5px;
+}
+
+@media (max-width: 600px) {
+    nav {
+        gap: 10px;
+    }
 }
