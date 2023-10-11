@@ -398,10 +398,6 @@ i[class*="van-type-"] {
 
 }
 
-.host-vans-title {
-    /* padding-inline: 26px; */
-}
-
 .host-van-single {
     display: flex;
     align-items: center;
@@ -657,10 +653,6 @@ i[class*="van-type-"] {
 .host-dashboard-reviews p>span {
     font-weight: bold;
     color: #161616;
-}
-
-.host-dashboard-vans {
-    /* padding: 38px 26px; */
 }
 
 .host-dashboard-vans>.top {
